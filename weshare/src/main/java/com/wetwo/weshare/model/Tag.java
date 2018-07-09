@@ -2,7 +2,7 @@ package com.wetwo.weshare.model;
 
 public class Tag {
     private int id;
-    private int messageId;
+    private int informationId;
     private String name;
 
     public int getId() {
@@ -13,12 +13,12 @@ public class Tag {
         this.id = id;
     }
 
-    public int getMessageId() {
-        return messageId;
+    public int getInformationId() {
+        return informationId;
     }
 
-    public void setMessageId(int messageId) {
-        this.messageId = messageId;
+    public void setInformationId(int informationId) {
+        this.informationId = informationId;
     }
 
     public String getName() {
@@ -33,7 +33,7 @@ public class Tag {
     public String toString() {
         return "Tag{" +
                 "id=" + id +
-                ", messageId=" + messageId +
+                ", informationId=" + informationId +
                 ", name='" + name + '\'' +
                 '}';
     }

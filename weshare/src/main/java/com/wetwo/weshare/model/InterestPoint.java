@@ -2,7 +2,7 @@ package com.wetwo.weshare.model;
 
 public class InterestPoint {
     private int id;
-    private int messageId;
+    private int informationId;
     private String name;
     private String latitude;
     private String longitude;
@@ -15,12 +15,12 @@ public class InterestPoint {
         this.id = id;
     }
 
-    public int getMessageId() {
-        return messageId;
+    public int getInformationId() {
+        return informationId;
     }
 
-    public void setMessageId(int messageId) {
-        this.messageId = messageId;
+    public void setInformationId(int informationId) {
+        this.informationId = informationId;
     }
 
     public String getName() {
@@ -51,7 +51,7 @@ public class InterestPoint {
     public String toString() {
         return "InterestPoint{" +
                 "id=" + id +
-                ", messageId=" + messageId +
+                ", informationId=" + informationId +
                 ", name='" + name + '\'' +
                 ", latitude='" + latitude + '\'' +
                 ", longitude='" + longitude + '\'' +

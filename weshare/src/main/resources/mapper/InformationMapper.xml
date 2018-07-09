@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "htp://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wetwo.weshare.mapper.MessageMapper">
-    <resultMap id="messageListResultMap" type="message">
+<mapper namespace="com.wetwo.weshare.mapper.InformationMapper">
+    <resultMap id="informationListResultMap" type="information">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
         <result column="latitude" property="latitude"/>
@@ -14,7 +14,7 @@
 
         <collection property="interestPoints" ofType="com.wetwo.weshare.model.InterestPoint">
             <id column="id" property="id"/>
-            <result column="messageId" property="messageId"/>
+            <result column="information_id" property="informationId"/>
             <result column="name" property="name"/>
             <result column="longitude" property="longitude"/>
             <result column="latitude" property="latitude"/>
@@ -22,13 +22,13 @@
 
         <collection property="tags" ofType="com.wetwo.weshare.model.Tag">
             <id column="id" property="id"/>
-            <result column="messageId" property="messageId"/>
+            <result column="information_id" property="informationId"/>
             <result column="name" property="name"/>
         </collection>
 
         <collection property="pictures" ofType="com.wetwo.weshare.model.Picture">
             <id column="id" property="id"/>
-            <result column="messageId" property="messageId"/>
+            <result column="information_id" property="informationId"/>
             <result column="url" property="url"/>
             <result column="position" property="position"/>
             <result column="createTime" property="createTime"/>
@@ -36,16 +36,16 @@
 
         <collection property="videos" ofType="com.wetwo.weshare.model.Video">
             <id column="id" property="id"/>
-            <result column="messageId" property="messageId"/>
+            <result column="information_id" property="informationId"/>
             <result column="url" property="url"/>
             <result column="position" property="position"/>
             <result column="createTime" property="createTime"/>
         </collection>
     </resultMap>
 
-    <sql id="qurey_message_where">
+    <sql id="qurey_information_where">
     </sql>
-    <select id="getMessages" resultMap="messageListResultMap">
-        select message.*,tag.*,picture.*,video.*,interest_point.* from message,tag,picture,video,interest_point
+    <select id="getInformations" resultMap="informationListResultMap">
+        select information.*,tag.*,picture.*,video.*,interest_point.* from information,tag,picture,video,interest_point
     </select>
 </mapper>

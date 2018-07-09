@@ -2,7 +2,7 @@ package com.wetwo.weshare.model;
 
 import java.util.List;
 
-public class Message {
+public class Information {
     private int id;
     private int userId;
     private String latitude;
@@ -105,7 +105,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "Information{" +
                 "id=" + id +
                 ", userId=" + userId +
                 ", latitude='" + latitude + '\'' +

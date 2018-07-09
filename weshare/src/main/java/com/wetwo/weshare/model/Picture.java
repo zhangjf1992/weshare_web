@@ -2,7 +2,7 @@ package com.wetwo.weshare.model;
 
 public class Picture {
     private int id;
-    private int messageId;
+    private int informationId;
     private String url;
     private String position;
     private String createTime;
@@ -15,12 +15,12 @@ public class Picture {
         this.id = id;
     }
 
-    public int getMessageId() {
-        return messageId;
+    public int getInformationId() {
+        return informationId;
     }
 
-    public void setMessageId(int messageId) {
-        this.messageId = messageId;
+    public void setInformationId(int informationId) {
+        this.informationId = informationId;
     }
 
     public String getUrl() {
@@ -51,7 +51,7 @@ public class Picture {
     public String toString() {
         return "Picture{" +
                 "id=" + id +
-                ", messageId=" + messageId +
+                ", informationId=" + informationId +
                 ", url='" + url + '\'' +
                 ", position='" + position + '\'' +
                 ", createTime='" + createTime + '\'' +

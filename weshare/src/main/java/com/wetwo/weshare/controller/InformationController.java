@@ -1,6 +1,6 @@
 package com.wetwo.weshare.controller;
 
-import com.wetwo.weshare.service.MessageService;
+import com.wetwo.weshare.service.InformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.json.GsonJsonParser;
 import org.springframework.boot.json.JsonParser;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("message")
-public class MessageController {
+@RequestMapping("information")
+public class InformationController {
 
     @Autowired
-    private MessageService messageService;
+    private InformationService informationService;
 
     @RequestMapping("{longitude}/{latitude}")
     public String get(@PathVariable("longitude") String longitude,@PathVariable("latitude") String latitude){
-        return messageService.get(longitude,latitude).toString();
+        return informationService.get(longitude,latitude).toString();
     }
 }
